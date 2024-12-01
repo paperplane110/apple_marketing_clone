@@ -6,7 +6,6 @@ import NightComputerPic from '../public/night-computer.jpg'
 import ChipsPic from "../public/CMS.jpg"
 import RenderPic from "../public/render.jpg"
 import ComputerPic from "../public/computer.jpg"
-import { motion } from "motion/react";
 import StickyButton from "@/components/StickyButton";
 import { Button } from "@/components/ui/button";
 
@@ -246,7 +245,7 @@ export default function Home() {
                 然后用 <strong className="desc-strong">animate() + Timeline sequence</strong>，
                 即动画序列的方法。这里需要注意的是，调用离开动画序列时，对于自身元素 scope.current 的引用会报类型错误，
                 因此将所有有动画的元素写成子元素，这样就可以顺利的编写离开动画了。
-                在编写动画序列时，配置 <strong className="desc-strong">at: "&lt;"</strong> 即可实现多个元素的动画同时开始。
+                在编写动画序列时，配置 <strong className="desc-strong">at: &quot;&lt;&quot;</strong> 即可实现多个元素的动画同时开始。
               </li>
               <li>
                 最后还需要定义整个组件的初始样式，即开始前的样式，

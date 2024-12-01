@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Plus, Scale } from "lucide-react";
-import { useAnimate, useInView, motion } from "motion/react";
+import { Plus } from "lucide-react";
+import { useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 
 export default function StickyButton() {
