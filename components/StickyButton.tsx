@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Plus } from "lucide-react";
-import { useAnimate, useInView } from "motion/react";
+import { AnimationSequence, useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 
 export default function StickyButton() {
@@ -14,19 +14,19 @@ export default function StickyButton() {
     ["#button", { scale: 2.5, opacity: 0.7 }, { ease: "easeInOut", at: "<", duration: 0.5 }],
     ["#button", { scale: 1, opacity: 1 }, { ease: "easeInOut", duration: 0.3 }],
     ["#icon", { opacity: 1 }, { ease: "easeInOut", at: "<", duration: 0.3 }],
-    ["#container", { width: "16rem"}],
+    ["#container", { width: "16rem"}, {}],
     ["#contents", { display: "block" }, { duration: 0.01 }],
-    ["#contents", { opacity: 1 }],
-  ]
+    ["#contents", { opacity: 1 }, {}],
+  ] as AnimationSequence
 
   const exitSequence = [
-    ["#contents", { opacity: 0 }],
+    ["#contents", { opacity: 0 }, {}],
     ["#button", { scale: 0 }, { ease: "backInOut", at: "<" }],
     ["#icon", { opacity: 0 }, { ease: "backInOut", at: "<" }],
     ["#contents", { display: "none" }, { duration: 0.01 }],
     ["#container", { width: '3.75rem' }, { duration: 0.25, ease: "circIn" }],
     ["#container", { scale: 0 }, { duration: 0.3, ease: "circIn" }]
-  ]
+  ] as AnimationSequence
 
   useEffect(() => {
     if (isInView) {

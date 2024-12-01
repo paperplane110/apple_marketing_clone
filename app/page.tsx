@@ -145,8 +145,8 @@ export default function Home() {
           </FadeDiv>
         </div>
       </section>
-      <footer className="flex flex-col items-center w-full bg-zinc-900 pb-[8rem]">
-        <div className="section pt-[8rem]">
+      <footer className="flex flex-col items-center w-full bg-zinc-900 py-[8rem]">
+        <div className="section">
           <div className="subsection mb-12">
             <p className="headline-eyebrow">2024/11/30 - Written by Tianyu</p>
             <p className="headline">写在后面</p>
@@ -220,9 +220,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="section pb-[8rem]">
+        <div className="section pb-[6rem]">
           <StickyButton />
-          <div className="subsection mt-[8rem] grid gap-y-6 desc">
+          <div className="subsection mt-[8rem] grid gap-y-6 desc pb-[6rem]">
             <p className="headline-eyebrow text-white">2024/12/01</p>
             <p>今日主要复刻了两个东西：一个拥有复杂动画悬浮按钮，以及渐变色霓虹字体</p>
             <p>悬浮按钮的实现思路是这样的：</p>
